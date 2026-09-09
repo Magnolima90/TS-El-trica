@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0f172a;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(250, 204, 21, 0.35);
+}
+
+.container-shell {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-heading {
+  @apply text-3xl font-black tracking-tight text-slate-900 sm:text-4xl;
+}
+
+.section-tag {
+  @apply inline-flex items-center rounded-full border border-electric-200 bg-electric-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-electric-600;
+}
+
+.card-surface {
+  @apply rounded-2xl border border-slate-200 bg-white shadow-soft;
+}
+
+.premium-button {
+  @apply inline-flex items-center justify-center rounded-full bg-electric-500 px-6 py-3 text-sm font-bold text-slate-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-electric-400 hover:shadow-lg hover:shadow-electric-200/60;
+}
+
+.secondary-button {
+  @apply inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-bold text-slate-900 transition-all duration-300 hover:border-electric-300 hover:text-electric-600;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.soft-card {
+  @apply rounded-[1.75rem] border border-white/10 bg-white/5 backdrop-blur-sm shadow-soft;
+}
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-lift,
+.premium-button,
+.secondary-button,
+a[href],
+button {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
+}
+
+.card-lift:hover,
+.premium-button:hover,
+.secondary-button:hover,
+a[href]:hover,
+button:hover {
+  transform: translateY(-2px);
+}
+
+.hero-float {
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  [data-animate] {
+    opacity: 1;
+    transform: none;
+  }
+}
