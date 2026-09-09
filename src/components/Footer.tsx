@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
+import { Instagram, Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
 import { company } from '../data/company';
 
 export function Footer() {
@@ -45,21 +45,14 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex items-center justify-between gap-4 border-t border-white/10 pt-8">
           <div className="flex gap-4 text-slate-300">
             <a href={company.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="rounded-full border border-white/10 p-2 transition hover:border-electric-400 hover:text-electric-300"><Instagram size={16} /></a>
-            <a href={company.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="rounded-full border border-white/10 p-2 transition hover:border-electric-400 hover:text-electric-300"><Facebook size={16} /></a>
-            <a href={company.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="rounded-full border border-white/10 p-2 transition hover:border-electric-400 hover:text-electric-300"><Linkedin size={16} /></a>
           </div>
 
-          <div className="flex flex-wrap items-center gap-5 text-sm text-slate-300">
-            <a href="#" className="transition hover:text-electric-300">Política de Privacidade</a>
-            <a href="#" className="transition hover:text-electric-300">Termos de Uso</a>
+          <div className="text-sm text-slate-400">
+            © 2026 {company.companyName}. Todos os direitos reservados.
           </div>
-        </div>
-
-        <div className="mt-8 text-center text-sm text-slate-400">
-          © 2026 {company.companyName}. Todos os direitos reservados.
         </div>
       </div>
     </footer>
