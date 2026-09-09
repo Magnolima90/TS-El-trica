@@ -29,7 +29,7 @@ export function Services() {
       <div className="container-shell">
         <SectionTitle
           tag="Soluções elétricas"
-          title="Serviços com tecnologia, segurança e confiabilidade"
+          title="Serviços de Engenharia Elétrica em Fortaleza"
           subtitle="Do planejamento à execução, entregamos soluções elétricas pensadas para performance, conformidade e durabilidade."
           align="center"
         />

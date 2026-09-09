@@ -13,7 +13,7 @@ export function Areas() {
             <article key={area.title} className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-soft">
               <img
                 src={area.image}
-                alt={area.title}
+                alt={`${area.title} em Fortaleza - TS Elétrica`}
                 loading="lazy"
                 className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
               />

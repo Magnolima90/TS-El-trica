@@ -15,7 +15,7 @@ export function Hero() {
           </span>
 
           <h1 className="mt-6 max-w-3xl text-4xl font-black leading-[1.02] tracking-[-0.06em] text-white sm:text-5xl lg:text-6xl">
-            TS Elétrica | Engenharia elétrica para residências, empresas e indústrias.
+            TS Elétrica | Engenharia Elétrica em Fortaleza
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
@@ -49,7 +49,7 @@ export function Hero() {
           <div className="hero-float relative overflow-hidden rounded-[2rem] border border-electric-300/40 bg-slate-900 shadow-[0_30px_60px_rgba(250,204,21,0.2)]">
             <img
               src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80"
-              alt="Equipe trabalhando em instalação elétrica"
+              alt="Equipe de engenharia elétrica trabalhando em instalação elétrica em Fortaleza"
               className="h-[520px] w-full object-cover opacity-90"
             />
 

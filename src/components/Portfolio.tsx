@@ -45,7 +45,7 @@ export function Portfolio() {
               <div className="overflow-hidden">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} - projeto de engenharia elétrica da TS Elétrica`}
                   loading="lazy"
                   className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
                 />
