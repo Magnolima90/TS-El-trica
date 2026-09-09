@@ -1,32 +1,68 @@
-# React + TypeScript + Vite
+# TS Elétrica
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Landing page profissional para a empresa TS Elétrica, voltada para engenharia elétrica, instalações, manutenção e soluções para residências, empresas e indústrias em Fortaleza, CE.
 
-Currently, two official plugins are available:
+## Sobre o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este projeto foi desenvolvido em React + TypeScript + Vite, com foco em:
 
-## React Compiler
+- apresentação institucional da empresa;
+- conversão de leads via WhatsApp e formulário;
+- SEO local para reforçar presença em buscas como "TS Elétrica" e "engenharia elétrica";
+- design responsivo e moderno, mantendo a identidade profissional da marca.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologias utilizadas
 
-## Expanding the Oxlint configuration
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Lucide React
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Como rodar localmente
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+1. Clone o projeto:
+
+```bash
+git clone https://github.com/Magnolima90/TS-El-trica.git
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+2. Acesse a pasta:
+
+```bash
+cd TS-El-trica
+```
+
+3. Instale as dependências:
+
+```bash
+npm install
+```
+
+4. Inicie o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+5. Acesse no navegador:
+
+```bash
+http://localhost:5173/
+```
+
+## Build de produção
+
+```bash
+npm run build
+```
+
+## Observações
+
+- O site já inclui otimizações de SEO e metadata para busca local.
+- O WhatsApp e o formulário estão preparados para conversão comercial.
+- Os dados reais da empresa foram preservados conforme informado.
+
+## Repositório
+
+- GitHub: https://github.com/Magnolima90/TS-El-trica
