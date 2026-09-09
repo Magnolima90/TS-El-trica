@@ -5,17 +5,7 @@ export function WhatsAppButton() {
   const waUrl = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(company.whatsappMessage)}`;
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 flex items-center gap-3">
-      <a
-        href={waUrl}
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Falar no WhatsApp"
-        className="hidden items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-bold text-white shadow-[0_16px_30px_rgba(37,211,102,0.35)] transition hover:scale-[1.02] sm:inline-flex"
-      >
-        <MessageCircle size={18} />
-        Fale conosco
-      </a>
+    <div className="fixed bottom-4 right-4 z-50 sm:bottom-5 sm:right-5">
       <a
         href={waUrl}
         target="_blank"

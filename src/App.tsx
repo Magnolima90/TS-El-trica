@@ -22,20 +22,6 @@ export default function App() {
 
     if (!animatedItems.length) return;
 
-    const revealVisibleItems = () => {
-      animatedItems.forEach((item) => {
-        const rect = item.getBoundingClientRect();
-        if (rect.top < window.innerHeight * 0.9) {
-          item.classList.add('is-visible');
-        }
-      });
-    };
-
-    if (!('IntersectionObserver' in window)) {
-      revealVisibleItems();
-      return;
-    }
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -49,12 +35,8 @@ export default function App() {
     );
 
     animatedItems.forEach((item) => {
-      const rect = item.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.9) {
-        item.classList.add('is-visible');
-      } else {
-        observer.observe(item);
-      }
+      item.classList.add('is-visible');
+      observer.observe(item);
     });
 
     return () => observer.disconnect();
