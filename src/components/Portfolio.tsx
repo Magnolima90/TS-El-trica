@@ -46,6 +46,8 @@ export function Portfolio() {
                 <img
                   src={project.image}
                   alt={`${project.title} - projeto de engenharia elétrica da TS Elétrica`}
+                  width={900}
+                  height={256}
                   loading="lazy"
                   className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
                 />

@@ -38,6 +38,8 @@ export function About() {
           <img
             src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
             alt="Equipe da TS Elétrica em reunião técnica de engenharia elétrica"
+            width={900}
+            height={420}
             className="h-72 w-full rounded-[2rem] object-cover shadow-soft sm:h-[420px]"
             loading="lazy"
           />
@@ -45,6 +47,8 @@ export function About() {
             <img
               src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=80"
               alt="Infraestrutura elétrica em obra de engenharia para instalação e manutenção"
+              width={900}
+              height={176}
               className="h-44 w-full rounded-[2rem] object-cover shadow-soft"
               loading="lazy"
             />

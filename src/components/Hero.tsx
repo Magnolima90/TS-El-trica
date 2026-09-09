@@ -50,6 +50,8 @@ export function Hero() {
             <img
               src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80"
               alt="Equipe de engenharia elétrica trabalhando em instalação elétrica em Fortaleza"
+              width={1200}
+              height={520}
               className="h-[520px] w-full object-cover opacity-90"
             />
 

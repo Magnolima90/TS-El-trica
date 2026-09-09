@@ -14,6 +14,8 @@ export function Areas() {
               <img
                 src={area.image}
                 alt={`${area.title} em Fortaleza - TS Elétrica`}
+                width={900}
+                height={256}
                 loading="lazy"
                 className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
               />

@@ -5,8 +5,6 @@ export const company = {
   email: 'ta_rcianosilva@hotmail.com',
   address: 'Fortaleza – CE',
   instagram: 'https://instagram.com/ts_eletricaa',
-  facebook: 'https://facebook.com/',
-  linkedin: 'https://linkedin.com/',
   experienceYears: 10,
   projectsCount: 500,
   clientsCount: 300,
