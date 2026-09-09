@@ -1,7 +1,8 @@
 import { ArrowUpRight, MessageCircle } from 'lucide-react';
+import { company } from '../data/company';
 
 export function ButtonWhatsApp({ text = 'Falar no WhatsApp', className = '' }: { text?: string; className?: string }) {
-  const url = `https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || '5500000000000'}?text=${encodeURIComponent('Olá! Gostaria de solicitar um orçamento para um serviço elétrico.')}`;
+  const url = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(company.whatsappMessage)}`;
 
   return (
     <a

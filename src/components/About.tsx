@@ -7,7 +7,7 @@ export function About() {
         <div>
           <span className="section-tag">Sobre nós</span>
           <h2 className="mt-5 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-            TS Elétrica | Engenharia Elétrica em Fortaleza
+            Quem é a TS Elétrica em Fortaleza
           </h2>
           <p className="mt-6 text-lg text-slate-600">
             Nossa empresa atua no mercado de engenharia elétrica com foco em soluções duráveis, técnicas e seguras para cada projeto. Trabalhamos com planejamento, execução, manutenção e suporte técnico para garantir qualidade em cada etapa.
