@@ -50,7 +50,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-[0.18em] text-slate-500">Telefone</p>
-                  <p className="mt-1 font-bold text-slate-900">{company.companyPhone}</p>
+                  <a href={company.companyPhoneLink} className="mt-1 block font-bold text-slate-900 transition hover:text-electric-600">{company.companyPhone}</a>
                 </div>
               </div>
             </div>
@@ -73,8 +73,8 @@ export function Contact() {
                   <MapPin size={18} />
                 </div>
                 <div>
-                  <p className="text-sm uppercase tracking-[0.18em] text-slate-500">Atuação</p>
-                  <p className="mt-1 font-bold text-slate-900">{company.address}</p>
+                  <p className="text-sm uppercase tracking-[0.18em] text-slate-500">Área de atendimento</p>
+                  <p className="mt-1 font-bold text-slate-900">{company.serviceAreas.join(', ')}</p>
                 </div>
               </div>
             </div>
@@ -86,9 +86,22 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-[0.18em] text-slate-500">Atendimento</p>
-                  <p className="mt-1 font-bold text-slate-900">Segunda a Sexta, 08:00 às 18:00</p>
+                  <p className="mt-1 font-bold text-slate-900">Comercial: Seg a Sex, 08:00 às 18:00</p>
+                  {company.emergency24h ? (
+                    <p className="mt-0.5 text-sm font-bold text-red-600">Emergências: 24h, todos os dias</p>
+                  ) : null}
                 </div>
               </div>
+            </div>
+
+            <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-soft">
+              <iframe
+                src={company.mapsEmbedUrl}
+                title={`Mapa da área de atendimento da ${company.companyName}`}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-56 w-full border-0"
+              />
             </div>
           </div>
 

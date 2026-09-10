@@ -1,6 +1,7 @@
 export const company = {
   companyName: 'TS Elétrica',
   companyPhone: '(85) 9 9786-7316',
+  companyPhoneLink: 'tel:+5585997867316',
   whatsapp: '5585997867316',
   email: 'ta_rcianosilva@hotmail.com',
   address: 'Fortaleza – CE',
@@ -8,9 +9,13 @@ export const company = {
   experienceYears: 10,
   projectsCount: 500,
   clientsCount: 300,
+  emergency24h: true,
   whatsappMessage: 'Olá! Gostaria de solicitar um orçamento para um serviço elétrico.',
+  whatsappEmergencyMessage: 'Olá! Preciso de atendimento elétrico de emergência.',
   serviceTypes: ['Projetos Elétricos', 'Instalações Elétricas', 'Manutenção', 'Painéis Elétricos', 'Energia Solar'],
   norms: ['NR-10', 'NR-35', 'ABNT NBR 5410', 'ABNT NBR 5419', 'ART, quando aplicável'],
+  serviceAreas: ['Fortaleza', 'Caucaia', 'Maracanaú', 'Eusébio', 'Aquiraz', 'Pacatuba', 'Itaitinga', 'São Gonçalo do Amarante'],
+  mapsEmbedUrl: 'https://www.google.com/maps?q=Fortaleza,+CE&output=embed',
 };
 
 export const stats = [
@@ -95,6 +100,7 @@ export const areas = [
 ];
 
 export const differentials = [
+  'Atendimento emergencial 24h',
   'Equipe especializada',
   'Atendimento rápido',
   'Orçamento personalizado',

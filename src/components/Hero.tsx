@@ -1,4 +1,5 @@
-import { ArrowRight, CheckCircle2, ShieldCheck, Sparkles, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle2, PhoneCall, ShieldCheck, Sparkles, Zap } from 'lucide-react';
+import { company } from '../data/company';
 import { ButtonWhatsApp } from './ButtonWhatsApp';
 
 export function Hero() {
@@ -9,10 +10,21 @@ export function Hero() {
 
       <div className="container-shell relative grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]">
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-electric-400/35 bg-electric-500/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-electric-300">
-            <Sparkles size={14} />
-            Engenharia elétrica profissional
-          </span>
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="inline-flex items-center gap-2 rounded-full border border-electric-400/35 bg-electric-500/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-electric-300">
+              <Sparkles size={14} />
+              Engenharia elétrica profissional
+            </span>
+            {company.emergency24h ? (
+              <a
+                href={company.companyPhoneLink}
+                className="inline-flex items-center gap-2 rounded-full border border-red-400/40 bg-red-500/15 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-red-300 transition hover:bg-red-500/25"
+              >
+                <PhoneCall size={14} />
+                Emergência 24h
+              </a>
+            ) : null}
+          </div>
 
           <h1 className="mt-6 max-w-3xl text-4xl font-black leading-[1.02] tracking-[-0.06em] text-white sm:text-5xl lg:text-6xl">
             TS Elétrica | Engenharia Elétrica em Fortaleza
@@ -32,7 +44,7 @@ export function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-200">
             {[
-              'Atendimento especializado',
+              'Atendimento emergencial 24h',
               'Soluções personalizadas',
               'Segurança e qualidade',
               'Suporte técnico',

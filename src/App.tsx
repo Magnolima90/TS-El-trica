@@ -8,6 +8,7 @@ import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { InstagramButton } from './components/InstagramButton';
 import { Portfolio } from './components/Portfolio';
 import { Process } from './components/Process';
 import { Safety } from './components/Safety';
@@ -87,6 +88,7 @@ export default function App() {
         </div>
       </main>
       <Footer />
+      <InstagramButton />
       <WhatsAppButton />
     </div>
   );

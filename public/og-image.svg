@@ -10,7 +10,7 @@
   <rect x="140" y="170" width="130" height="130" rx="24" fill="#FACC15"/>
   <path d="M170 245v-42h38l15 29 15-29h38v42h-28v-18l-15 27h-20l-15-27v18h-28Z" fill="#0F172A"/>
   <text x="320" y="230" fill="#F8FAFC" font-size="42" font-family="Arial, sans-serif" font-weight="700" letter-spacing="6">ENGENHARIA</text>
-  <text x="320" y="285" fill="#FACC15" font-size="62" font-family="Arial, sans-serif" font-weight="900">[NOME DA EMPRESA]</text>
+  <text x="320" y="285" fill="#FACC15" font-size="62" font-family="Arial, sans-serif" font-weight="900">TS ELÉTRICA</text>
   <text x="320" y="350" fill="#CBD5E1" font-size="32" font-family="Arial, sans-serif">Engenharia Elétrica e Instalações</text>
   <g fill="#FACC15" font-size="26" font-family="Arial, sans-serif" font-weight="700">
     <text x="320" y="435">SEGURANÇA</text>
