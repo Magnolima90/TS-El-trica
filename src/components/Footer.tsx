@@ -10,7 +10,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <img
                 src="/logo-ts-eletrica.svg"
-                alt="Logo da TS Elétrica - Engenharia Elétrica em Fortaleza"
+                alt="Logo da TS Elétrica - Soluções Elétricas em Fortaleza"
                 className="h-12 w-12 rounded-2xl border border-white/10 bg-slate-900 object-cover"
               />
               <div>

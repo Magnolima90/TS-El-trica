@@ -27,7 +27,7 @@ export function Hero() {
           </div>
 
           <h1 className="mt-6 max-w-3xl text-4xl font-black leading-[1.02] tracking-[-0.06em] text-white sm:text-5xl lg:text-6xl">
-            TS Elétrica | Engenharia Elétrica em Fortaleza
+            TS Elétrica | Soluções Elétricas em Fortaleza
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">

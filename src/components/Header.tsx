@@ -11,7 +11,7 @@ export function Header() {
         <a href="#inicio" className="flex items-center gap-3" aria-label="Página inicial">
           <img
             src="/logo-ts-eletrica.svg"
-            alt="Logo da TS Elétrica - Engenharia Elétrica em Fortaleza"
+            alt="Logo da TS Elétrica - Soluções Elétricas em Fortaleza"
             className="h-11 w-auto rounded-2xl border border-slate-200 bg-slate-950 object-cover shadow-soft"
           />
           <div className="hidden sm:block">
