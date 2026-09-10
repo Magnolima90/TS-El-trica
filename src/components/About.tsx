@@ -1,4 +1,5 @@
 import { ArrowRight, BadgeCheck, CheckCircle } from 'lucide-react';
+import proprietarioPhoto from '../assets/proprietario-ts-eletrica.jpg';
 
 export function About() {
   return (
@@ -34,38 +35,28 @@ export function About() {
           </a>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2">
+        <div>
           <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
-            alt="Equipe da TS Elétrica em reunião técnica de engenharia elétrica"
-            width={900}
-            height={420}
-            className="h-72 w-full rounded-[2rem] object-cover shadow-soft sm:h-[420px]"
+            src={proprietarioPhoto}
+            alt="Proprietário da TS Elétrica, especialista em soluções elétricas em Fortaleza"
+            width={1200}
+            height={1600}
+            className="h-[460px] w-full rounded-[2rem] object-cover object-top shadow-soft sm:h-[620px]"
             loading="lazy"
           />
-          <div className="space-y-5">
-            <img
-              src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=80"
-              alt="Infraestrutura elétrica em obra de engenharia para instalação e manutenção"
-              width={900}
-              height={176}
-              className="h-44 w-full rounded-[2rem] object-cover shadow-soft"
-              loading="lazy"
-            />
-            <div className="rounded-[2rem] border border-slate-200 bg-slate-950 p-6 text-white shadow-soft">
-              <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-electric-500 text-slate-900">
-                  <BadgeCheck size={18} />
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-electric-300">Compromisso</p>
-                  <p className="text-xl font-bold">Execução segura</p>
-                </div>
+          <div className="mt-5 rounded-[1.4rem] border border-slate-200 bg-slate-950 p-5 text-white shadow-soft">
+            <div className="flex items-center gap-3">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-electric-500 text-slate-900">
+                <BadgeCheck size={18} />
               </div>
-              <p className="mt-4 text-sm leading-6 text-slate-300">
-                Nosso processo prioriza organização, segurança, qualificação técnica e bom atendimento para cada cliente.
-              </p>
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-electric-300">Compromisso</p>
+                <p className="text-xl font-bold">Execução segura</p>
+              </div>
             </div>
+            <p className="mt-3 text-sm leading-6 text-slate-300">
+              Nosso processo prioriza organização, segurança, qualificação técnica e bom atendimento para cada cliente.
+            </p>
           </div>
         </div>
       </div>
