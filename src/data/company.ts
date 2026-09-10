@@ -46,14 +46,24 @@ export const services = [
   { title: 'Eficiência Energética', description: 'Diagnósticos e ações para reduzir consumo, perdas e custos operacionais.', icon: 'Zap' },
 ];
 
-export const portfolioItems = [
-  { title: 'Residencial Premium', category: 'Residencial', description: 'Reforma elétrica completa com infraestrutura moderna e iluminação inteligente.', image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80' },
-  { title: 'Escritório Corporativo', category: 'Comercial', description: 'Adequação total de distribuição elétrica e sistemas de energia para operação ativa.', image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80' },
-  { title: 'Linha de Produção', category: 'Industrial', description: 'Automação e manutenção em área fabril com maior segurança e produtividade.', image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80' },
-  { title: 'Painel de Distribuição', category: 'Painéis', description: 'Montagem de painel elétrico com organização, proteção e controle de cargas.', image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80' },
-  { title: 'Sistema Fotovoltaico', category: 'Energia Solar', description: 'Projeto e instalação para geração de energia limpa e redução de custos.', image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80' },
-  { title: 'Subestação de Média Tensão', category: 'Subestações', description: 'Infraestrutura preparada para demandas técnicas e operacionais elevadas.', image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80' },
-  { title: 'Diagnóstico de Rede', category: 'Manutenção', description: 'Inspeção técnica para corrigir falhas e aumentar a confiabilidade elétrica.', image: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80' },
+export type PortfolioItem =
+  | { type: 'image'; title: string; category: string; description: string; src: string }
+  | { type: 'video'; title: string; category: string; description: string; src: string; poster: string };
+
+export const portfolioItems: PortfolioItem[] = [
+  { type: 'image', title: 'Quadro Geral de Baixa Tensão (QGBT)', category: 'Painéis Elétricos', description: 'Montagem de QGBT industrial com organização de circuitos, disjuntores e DPS.', src: '/projetos/painel-qgbt-industrial.jpg' },
+  { type: 'image', title: 'Sala Multimídia com Iluminação Cênica', category: 'Iluminação Comercial', description: 'Projeto de iluminação cênica em LED para sala corporativa com forro rebaixado.', src: '/projetos/escritorio-home-theater-led.jpg' },
+  { type: 'video', title: 'Iluminação em Camadas no Forro', category: 'Iluminação Comercial', description: 'Instalação de iluminação em LED em forro de gesso em camadas, com vista panorâmica de Fortaleza.', src: '/projetos/video-teto-led-camadas.mp4', poster: '/projetos/video-teto-led-camadas-poster.jpg' },
+  { type: 'image', title: 'Painel de Medição Individualizada', category: 'Painéis Elétricos', description: 'Quadro com múltiplos medidores de energia, cabeamento organizado e identificado.', src: '/projetos/quadro-medidores-finalizado.jpg' },
+  { type: 'image', title: 'Corredor com Iluminação em Sanca', category: 'Iluminação Comercial', description: 'Projeto de iluminação em LED contínua no forro, integrado ao ar-condicionado e acabamento em madeira.', src: '/projetos/escritorio-corredor-led.jpg' },
+  { type: 'video', title: 'Iluminação em Sanca — Eusébio, CE', category: 'Iluminação Comercial', description: 'Instalação de iluminação em LED em sanca de corredor, projeto executado em Eusébio, CE.', src: '/projetos/video-corredor-led-eusebio.mp4', poster: '/projetos/video-corredor-led-eusebio-poster.jpg' },
+  { type: 'image', title: 'Quadro de Distribuição', category: 'Painéis Elétricos', description: 'Montagem de quadro de distribuição com disjuntores, DPS e barramentos organizados.', src: '/projetos/quadro-distribuicao-organizado.jpg' },
+  { type: 'image', title: 'Escada com Iluminação Embutida', category: 'Iluminação Comercial', description: 'Iluminação em LED embutida em guarda-corpo de madeira curvo, destacando o design arquitetônico.', src: '/projetos/escritorio-escada-led.jpg' },
+  { type: 'video', title: 'Acabamento com Iluminação Integrada', category: 'Iluminação Comercial', description: 'Execução de revestimento em madeira com iluminação em LED integrada ao ambiente.', src: '/projetos/video-acabamento-madeira.mp4', poster: '/projetos/video-acabamento-madeira-poster.jpg' },
+  { type: 'image', title: 'Copa Corporativa com Iluminação em LED', category: 'Iluminação Comercial', description: 'Instalação elétrica e iluminação em LED embutida em marcenaria para escritório corporativo.', src: '/projetos/escritorio-copa-led.jpg' },
+  { type: 'image', title: 'Sala Privativa com Iluminação em LED', category: 'Iluminação Comercial', description: 'Iluminação de destaque em teto e marcenaria para sala privativa corporativa.', src: '/projetos/escritorio-sala-reuniao-led.jpg' },
+  { type: 'video', title: 'Projeto Concluído com Sucesso', category: 'Iluminação Comercial', description: 'Registro de mais uma etapa de instalação elétrica e acabamento concluída.', src: '/projetos/video-porta-concluida.mp4', poster: '/projetos/video-porta-concluida-poster.jpg' },
+  { type: 'video', title: 'Detalhe de Componentes de Qualidade', category: 'Painéis Elétricos', description: 'Detalhe de disjuntores e componentes utilizados na montagem dos quadros elétricos.', src: '/projetos/video-detalhe-disjuntores.mp4', poster: '/projetos/video-detalhe-disjuntores-poster.jpg' },
 ];
 
 export const faqs = [
