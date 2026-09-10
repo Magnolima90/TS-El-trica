@@ -73,7 +73,7 @@ export function Hero() {
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-electric-300">Atendimento em Fortaleza</p>
-                  <h2 className="mt-2 text-2xl font-black text-white">TS Elétrica</h2>
+                  <p className="mt-2 text-2xl font-black text-white">TS Elétrica</p>
                 </div>
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-electric-500 text-slate-900 shadow-[0_12px_26px_rgba(250,204,21,0.45)]">
                   <Zap size={22} />

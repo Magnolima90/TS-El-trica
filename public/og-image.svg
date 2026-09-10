@@ -8,7 +8,7 @@
   <rect width="1200" height="630" fill="url(#bg)"/>
   <rect x="90" y="90" width="1020" height="450" rx="32" fill="#111827" stroke="#FACC15" stroke-width="3"/>
   <rect x="140" y="170" width="130" height="130" rx="24" fill="#FACC15"/>
-  <path d="M170 245v-42h38l15 29 15-29h38v42h-28v-18l-15 27h-20l-15-27v18h-28Z" fill="#0F172A"/>
+  <path d="M216 186L183 249H207L194 289L239 223H212L225 186H216Z" fill="#0F172A"/>
   <text x="320" y="230" fill="#F8FAFC" font-size="42" font-family="Arial, sans-serif" font-weight="700" letter-spacing="6">ENGENHARIA</text>
   <text x="320" y="285" fill="#FACC15" font-size="62" font-family="Arial, sans-serif" font-weight="900">TS ELÉTRICA</text>
   <text x="320" y="350" fill="#CBD5E1" font-size="32" font-family="Arial, sans-serif">Engenharia Elétrica e Instalações</text>
