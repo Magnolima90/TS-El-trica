@@ -11,14 +11,14 @@ export function Hero() {
       <div className="container-shell relative grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]">
         <div>
           <div className="flex flex-wrap items-center gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full border border-electric-400/35 bg-electric-500/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-electric-300">
+            <span className="inline-flex items-center gap-2 rounded-full border border-electric-400/35 bg-electric-500/10 px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-electric-300">
               <Sparkles size={14} />
               Engenharia elétrica profissional
             </span>
             {company.emergency24h ? (
               <a
                 href={company.companyPhoneLink}
-                className="inline-flex items-center gap-2 rounded-full border border-red-400/40 bg-red-500/15 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-red-300 transition hover:bg-red-500/25"
+                className="inline-flex items-center gap-2 rounded-full border border-red-400/40 bg-red-500/15 px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-red-300 transition hover:bg-red-500/25"
               >
                 <PhoneCall size={14} />
                 Emergência 24h

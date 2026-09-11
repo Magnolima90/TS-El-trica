@@ -4,14 +4,14 @@ import { company } from '../data/company';
 export function Footer() {
   return (
     <footer className="bg-slate-950 text-white">
-      <div className="container-shell py-16">
+      <div className="container-shell pb-44 pt-16 sm:pb-16">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
               <img
                 src="/logo-ts-eletrica.svg"
                 alt="Logo da TS Elétrica - Soluções Elétricas em Fortaleza"
-                className="h-12 w-12 rounded-2xl border border-white/10 bg-slate-900 object-cover"
+                className="h-12 w-auto rounded-2xl border border-white/10 bg-slate-900 object-cover"
               />
               <div>
                 <p className="text-xs uppercase tracking-[0.22em] text-slate-400">Fortaleza – CE</p>
@@ -46,7 +46,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex items-center justify-between gap-4 border-t border-white/10 pt-8">
+        <div className="mt-10 flex flex-col items-center gap-5 border-t border-white/10 pt-8 text-center sm:flex-row sm:justify-between sm:text-left">
           <a
             href={company.instagram}
             target="_blank"
