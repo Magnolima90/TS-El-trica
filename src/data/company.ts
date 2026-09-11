@@ -12,7 +12,7 @@ export const company = {
   emergency24h: true,
   whatsappMessage: 'Olá! Gostaria de solicitar um orçamento para um serviço elétrico.',
   whatsappEmergencyMessage: 'Olá! Preciso de atendimento elétrico de emergência.',
-  serviceTypes: ['Projetos Elétricos', 'Instalações Elétricas', 'Manutenção', 'Painéis Elétricos', 'Energia Solar'],
+  serviceTypes: ['Projetos Elétricos', 'Instalações Elétricas', 'Manutenção', 'Painéis Elétricos', 'CFTV', 'Energia Solar'],
   norms: ['NR-10', 'NR-35', 'ABNT NBR 5410', 'ABNT NBR 5419', 'ART, quando aplicável'],
   serviceAreas: ['Fortaleza', 'Caucaia', 'Maracanaú', 'Eusébio', 'Aquiraz', 'Pacatuba', 'Itaitinga', 'São Gonçalo do Amarante'],
   mapsEmbedUrl: 'https://www.google.com/maps?q=Fortaleza,+CE&output=embed',
@@ -28,6 +28,7 @@ export const stats = [
 export const services = [
   { title: 'Projetos Elétricos', description: 'Cálculos, layouts e soluções técnicas para projetos executivos e detalhados.', icon: 'Bolt' },
   { title: 'Instalações Elétricas', description: 'Execução de instalações em baixa e média tensão com segurança e qualidade.', icon: 'Cable' },
+  { title: 'Instalação de CFTV', description: 'Projeto e instalação de câmeras de segurança para monitoramento residencial, comercial e industrial.', icon: 'Camera' },
   { title: 'Manutenção Preventiva', description: 'Ações programadas para reduzir falhas e aumentar a confiabilidade dos sistemas.', icon: 'ShieldCheck' },
   { title: 'Manutenção Corretiva', description: 'Diagnóstico e reparo rápido para restabelecer o funcionamento do sistema elétrico.', icon: 'Wrench' },
   { title: 'Instalações Industriais', description: 'Infraestrutura elétrica para ambientes industriais e processos produtivos.', icon: 'Factory' },

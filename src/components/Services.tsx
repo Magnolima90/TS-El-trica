@@ -1,10 +1,11 @@
-import { ArrowUpRight, Cable, Building2, Factory, ShieldCheck, Wrench, Home, CircuitBoard, CloudLightning, Cpu, Gauge, Warehouse, Bot, ClipboardCheck, ThermometerSun, Zap, Bolt, SunMedium, PanelTop, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, Cable, Building2, Factory, ShieldCheck, Wrench, Home, CircuitBoard, CloudLightning, Cpu, Gauge, Warehouse, Bot, ClipboardCheck, ThermometerSun, Zap, Bolt, SunMedium, PanelTop, Camera, CheckCircle2 } from 'lucide-react';
 import { services } from '../data/company';
 import { SectionTitle } from './SectionTitle';
 
 const iconMap = {
   Bolt,
   Cable,
+  Camera,
   ShieldCheck,
   Wrench,
   Factory,
@@ -29,7 +30,7 @@ export function Services() {
       <div className="container-shell">
         <SectionTitle
           tag="Soluções elétricas"
-          title="Serviços de Engenharia Elétrica em Fortaleza"
+          title="Serviços e Soluções Elétricas em Fortaleza"
           subtitle="Do planejamento à execução, entregamos soluções elétricas pensadas para performance, conformidade e durabilidade."
           align="center"
         />

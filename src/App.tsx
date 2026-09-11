@@ -51,13 +51,13 @@ export default function App() {
           <Hero />
         </div>
         <div data-animate>
-          <Stats />
+          <About />
         </div>
         <div data-animate>
           <Services />
         </div>
         <div data-animate>
-          <About />
+          <Stats />
         </div>
         <div data-animate>
           <Areas />

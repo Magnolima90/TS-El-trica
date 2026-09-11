@@ -60,11 +60,11 @@ export function Hero() {
         <div className="relative">
           <div className="hero-float relative overflow-hidden rounded-[2rem] border border-electric-300/40 bg-slate-900 shadow-[0_30px_60px_rgba(250,204,21,0.2)]">
             <img
-              src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80"
-              alt="Equipe de engenharia elétrica trabalhando em instalação elétrica em Fortaleza"
-              width={1200}
-              height={520}
-              className="h-[520px] w-full object-cover opacity-90"
+              src="/projetos/escritorio-corredor-led.jpg"
+              alt="Projeto de iluminação em LED executado pela TS Elétrica em escritório corporativo"
+              width={1242}
+              height={933}
+              className="h-[520px] w-full object-cover"
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" />
