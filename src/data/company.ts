@@ -92,24 +92,6 @@ export const processSteps = [
   { number: '05', title: 'Entrega', description: 'Finalizamos o projeto e realizamos os testes necessários.' },
 ];
 
-export const areas = [
-  {
-    title: 'Residencial',
-    description: 'Instalações, reformas, adequações, iluminação, quadros elétricos e manutenção.',
-    image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    title: 'Comercial',
-    description: 'Projetos, instalações, manutenção, iluminação, infraestrutura e adequações elétricas.',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    title: 'Industrial',
-    description: 'Painéis, máquinas, automação, manutenção, infraestrutura, subestações e sistemas elétricos.',
-    image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=80',
-  },
-];
-
 export const differentials = [
   'Atendimento emergencial 24h',
   'Equipe especializada',

@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { About } from './components/About';
-import { Areas } from './components/Areas';
 import { CTA } from './components/CTA';
 import { Contact } from './components/Contact';
 import { Differentials } from './components/Differentials';
@@ -58,9 +57,6 @@ export default function App() {
         </div>
         <div data-animate>
           <Stats />
-        </div>
-        <div data-animate>
-          <Areas />
         </div>
         <div data-animate>
           <Differentials />
