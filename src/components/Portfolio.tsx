@@ -11,7 +11,7 @@ export function Portfolio() {
 
   const filteredProjects =
     activeCategory === 'Todos'
-      ? portfolioItems
+      ? portfolioItems.filter((project) => !project.hideFromAll)
       : portfolioItems.filter((project) => project.category === activeCategory);
 
   const activeItem = lightboxIndex !== null ? filteredProjects[lightboxIndex] : null;

@@ -48,11 +48,11 @@ export const services = [
 ];
 
 export type PortfolioItem =
-  | { type: 'image'; title: string; category: string; description: string; src: string }
-  | { type: 'video'; title: string; category: string; description: string; src: string; poster: string };
+  | { type: 'image'; title: string; category: string; description: string; src: string; hideFromAll?: boolean }
+  | { type: 'video'; title: string; category: string; description: string; src: string; poster: string; hideFromAll?: boolean };
 
 export const portfolioItems: PortfolioItem[] = [
-  { type: 'image', title: 'Quadro Geral de Baixa Tensão (QGBT)', category: 'Painéis Elétricos', description: 'Montagem de QGBT industrial com organização de circuitos, disjuntores e DPS.', src: '/projetos/painel-qgbt-industrial.jpg' },
+  { type: 'image', title: 'Quadro Geral de Baixa Tensão (QGBT)', category: 'Painéis Elétricos', description: 'Montagem de QGBT industrial com organização de circuitos, disjuntores e DPS.', src: '/projetos/painel-qgbt-industrial.jpg', hideFromAll: true },
   { type: 'image', title: 'Sala Multimídia com Iluminação Cênica', category: 'Iluminação Comercial', description: 'Projeto de iluminação cênica em LED para sala corporativa com forro rebaixado.', src: '/projetos/escritorio-home-theater-led.jpg' },
   { type: 'video', title: 'Iluminação em Camadas no Forro', category: 'Iluminação Comercial', description: 'Instalação de iluminação em LED em forro de gesso em camadas, com vista panorâmica de Fortaleza.', src: '/projetos/video-teto-led-camadas.mp4', poster: '/projetos/video-teto-led-camadas-poster.jpg' },
   { type: 'image', title: 'Painel de Medição Individualizada', category: 'Painéis Elétricos', description: 'Quadro com múltiplos medidores de energia, cabeamento organizado e identificado.', src: '/projetos/quadro-medidores-finalizado.jpg' },
