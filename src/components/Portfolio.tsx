@@ -1,3 +1,5 @@
+'use client';
+
 import { ChevronLeft, ChevronRight, Play, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { portfolioItems } from '../data/company';

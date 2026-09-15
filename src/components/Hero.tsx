@@ -7,6 +7,7 @@ import {
   MessageCircle,
   UserRound,
 } from 'lucide-react';
+import Image from 'next/image';
 import { company } from '../data/company';
 import proprietarioPhoto from '../assets/proprietario-ts-eletrica.jpg';
 
@@ -27,10 +28,13 @@ type HeroProps = {
 export function Hero({ onOpenPanel }: HeroProps) {
   return (
     <section id="inicio" className="relative isolate flex h-[100svh] min-h-[560px] flex-col overflow-hidden bg-slate-950 text-white">
-      <img
+      <Image
         src={proprietarioPhoto}
         alt="Profissional da TS Elétrica em uma instalação elétrica"
-        className="absolute inset-0 h-full w-full object-cover object-[62%_center]"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[62%_center]"
       />
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(148,163,184,0.2),_transparent_45%),linear-gradient(90deg,rgba(2,6,23,0.86)_0%,rgba(2,6,23,0.58)_28%,rgba(2,6,23,0.22)_58%,rgba(2,6,23,0.86)_100%)]" />

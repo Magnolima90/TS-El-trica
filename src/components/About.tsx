@@ -1,4 +1,5 @@
 import { ArrowRight, BadgeCheck, CheckCircle } from 'lucide-react';
+import Image from 'next/image';
 import proprietarioPhoto from '../assets/proprietario-ts-eletrica.jpg';
 
 export function About() {
@@ -36,14 +37,12 @@ export function About() {
         </div>
 
         <div className="order-1 lg:order-2">
-          <img
+          <Image
             src={proprietarioPhoto}
             alt="Proprietário da TS Elétrica, especialista em soluções elétricas em Fortaleza"
             width={1200}
             height={1600}
             className="h-[460px] w-full rounded-[2rem] object-cover object-top shadow-soft sm:h-[620px]"
-            loading="lazy"
-            decoding="async"
           />
           <div className="mt-5 rounded-[1.4rem] border border-slate-200 bg-slate-950 p-5 text-white shadow-soft">
             <div className="flex items-center gap-3">

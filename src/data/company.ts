@@ -1,3 +1,5 @@
+export const siteUrl = 'https://ts-eletrica.vercel.app';
+
 export const company = {
   companyName: 'TS Elétrica',
   companyPhone: '(85) 9 9786-7316',
@@ -16,6 +18,13 @@ export const company = {
   norms: ['NR-10', 'NR-35', 'ABNT NBR 5410', 'ABNT NBR 5419', 'ART, quando aplicável'],
   serviceAreas: ['Fortaleza', 'Caucaia', 'Maracanaú', 'Eusébio', 'Aquiraz', 'Pacatuba', 'Itaitinga', 'São Gonçalo do Amarante'],
   mapsEmbedUrl: 'https://www.google.com/maps?q=Fortaleza,+CE&output=embed',
+  // coordenada pública do centro de Fortaleza-CE, usada como referência de área de
+  // atendimento no JSON-LD (a empresa não divulga endereço físico)
+  geo: { latitude: -3.7172, longitude: -38.5433 },
+  businessHours: {
+    commercial: { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:00', label: 'Comercial: Seg a Sex, 08:00 às 18:00' },
+    emergency: { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '00:00', closes: '23:59', label: 'Emergências: 24h, todos os dias' },
+  },
 };
 
 export const stats = [

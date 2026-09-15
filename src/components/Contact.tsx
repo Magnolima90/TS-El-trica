@@ -1,3 +1,5 @@
+'use client';
+
 import { Mail, MapPin, Phone, Clock3 } from 'lucide-react';
 import { useState, type FormEvent } from 'react';
 import { company } from '../data/company';
@@ -86,9 +88,9 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-[0.18em] text-slate-500">Atendimento</p>
-                  <p className="mt-1 font-bold text-slate-900">Comercial: Seg a Sex, 08:00 às 18:00</p>
+                  <p className="mt-1 font-bold text-slate-900">{company.businessHours.commercial.label}</p>
                   {company.emergency24h ? (
-                    <p className="mt-0.5 text-sm font-bold text-red-600">Emergências: 24h, todos os dias</p>
+                    <p className="mt-0.5 text-sm font-bold text-red-600">{company.businessHours.emergency.label}</p>
                   ) : null}
                 </div>
               </div>

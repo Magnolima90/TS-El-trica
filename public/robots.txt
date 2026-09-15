@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ts-eletrica.vercel.app/sitemap.xml

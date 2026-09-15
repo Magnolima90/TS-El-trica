@@ -112,27 +112,31 @@ select {
 }
 
 .panel-backdrop {
-  @apply fixed inset-0 z-[100] flex justify-end bg-slate-950/65 p-0 backdrop-blur-sm sm:p-4;
-  animation: panelFade 0.25s ease-out both;
+  @apply fixed inset-0 z-[100] flex justify-end bg-slate-950/65 p-0 backdrop-blur-sm transition-opacity duration-300 ease-out sm:p-4;
+}
+
+.panel-backdrop[data-state='closed'] {
+  @apply pointer-events-none opacity-0;
+}
+
+.panel-backdrop[data-state='open'] {
+  @apply opacity-100;
 }
 
 .content-panel {
-  @apply relative h-full w-full overflow-y-auto bg-slate-50 shadow-2xl sm:max-w-5xl sm:rounded-[2rem];
-  animation: panelSlide 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  @apply relative h-full w-full overflow-y-auto bg-slate-50 shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] sm:max-w-5xl sm:rounded-[2rem];
+}
+
+.panel-backdrop[data-state='closed'] .content-panel {
+  @apply translate-x-full;
+}
+
+.panel-backdrop[data-state='open'] .content-panel {
+  @apply translate-x-0;
 }
 
 .panel-close {
   @apply sticky right-5 top-5 z-20 ml-auto mr-5 mt-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-slate-950 text-2xl leading-none text-white shadow-lg transition hover:scale-105 hover:bg-electric-500 hover:text-slate-950;
-}
-
-@keyframes panelFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes panelSlide {
-  from { opacity: 0; transform: translateX(28px); }
-  to { opacity: 1; transform: translateX(0); }
 }
 
 [data-animate] {
@@ -189,10 +193,5 @@ button:hover {
   [data-animate] {
     opacity: 1;
     transform: none;
-  }
-
-  .panel-backdrop,
-  .content-panel {
-    animation: none;
   }
 }
