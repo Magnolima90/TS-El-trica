@@ -38,7 +38,7 @@ export function Contact() {
       <div className="container-shell">
         <div className="mb-10 text-center">
           <span className="section-tag">Contato</span>
-          <h2 className="section-heading mt-5">Solicite seu orçamento</h2>
+          <h2 className="section-heading mt-5">Orçamento de engenharia elétrica em Fortaleza</h2>
         </div>
 
         <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">

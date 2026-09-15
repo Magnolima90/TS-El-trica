@@ -9,7 +9,7 @@ export function Process() {
       <div className="container-shell">
         <div className="text-center">
           <span className="section-tag">Processo</span>
-          <h2 className="section-heading mt-5">Como trabalhamos</h2>
+          <h2 className="section-heading mt-5">Como funciona um serviço de engenharia elétrica</h2>
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-5">

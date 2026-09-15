@@ -8,7 +8,7 @@ export function Differentials() {
       <div className="container-shell">
         <SectionTitle
           tag="Diferenciais"
-          title="Por que escolher nossa empresa?"
+          title="Por que escolher a TS Elétrica em Fortaleza?"
           align="center"
         />
 

@@ -9,7 +9,7 @@ export function FAQ() {
   return (
     <section id="faq" className="bg-white py-20">
       <div className="container-shell">
-        <SectionTitle tag="FAQ" title="Perguntas frequentes" align="center" />
+        <SectionTitle tag="FAQ" title="Dúvidas sobre serviços elétricos em Fortaleza" align="center" />
 
         <div className="mx-auto mt-12 max-w-4xl space-y-4">
           {faqs.map((item, index) => {

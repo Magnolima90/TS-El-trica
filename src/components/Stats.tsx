@@ -58,6 +58,7 @@ export function Stats() {
       <div className="container-shell">
         <div className="mb-8 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-electric-300">Resultado e confiança</p>
+          <h2 className="sr-only">Experiência da TS Elétrica em engenharia elétrica</h2>
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {stats.map((stat, index) => {

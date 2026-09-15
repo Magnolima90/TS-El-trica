@@ -64,6 +64,7 @@ export function Hero() {
               alt="Projeto de iluminação em LED executado pela TS Elétrica em escritório corporativo"
               width={1242}
               height={933}
+              fetchPriority="high"
               className="h-[520px] w-full object-cover"
             />
 

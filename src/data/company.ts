@@ -5,7 +5,7 @@ export const company = {
   whatsapp: '5585997867316',
   email: 'ta_rcianosilva@hotmail.com',
   address: 'Fortaleza – CE',
-  instagram: 'https://instagram.com/ts_eletricaa',
+  instagram: 'https://www.instagram.com/ts_eletricaa',
   experienceYears: 10,
   projectsCount: 500,
   clientsCount: 300,

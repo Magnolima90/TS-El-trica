@@ -12,6 +12,8 @@ export function Header() {
           <img
             src="/logo-ts-eletrica.svg"
             alt="Logo da TS Elétrica - Soluções Elétricas em Fortaleza"
+            width={44}
+            height={44}
             className="h-11 w-auto rounded-2xl border border-slate-200 bg-slate-950 object-cover shadow-soft"
           />
           <div className="hidden sm:block">

@@ -11,6 +11,8 @@ export function Footer() {
               <img
                 src="/logo-ts-eletrica.svg"
                 alt="Logo da TS Elétrica - Soluções Elétricas em Fortaleza"
+                width={48}
+                height={48}
                 className="h-12 w-auto rounded-2xl border border-white/10 bg-slate-900 object-cover"
               />
               <div>

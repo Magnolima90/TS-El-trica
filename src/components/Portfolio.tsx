@@ -78,6 +78,7 @@ export function Portfolio() {
                   width={900}
                   height={256}
                   loading="lazy"
+                  decoding="async"
                   className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
                 />
                 {project.type === 'video' ? (
