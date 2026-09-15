@@ -4,20 +4,34 @@ Landing page profissional para a empresa TS Elétrica, voltada para engenharia e
 
 ## Sobre o projeto
 
-Este projeto foi desenvolvido em React + TypeScript + Vite, com foco em:
+Este projeto foi desenvolvido em React + TypeScript + Next.js, com foco em:
 
-- apresentação institucional da empresa;
+- apresentação institucional da empresa, com renderização estática (SSG) para SEO técnico;
 - conversão de leads via WhatsApp e formulário;
 - SEO local para reforçar presença em buscas como "TS Elétrica" e "engenharia elétrica";
 - design responsivo e moderno, mantendo a identidade profissional da marca.
 
 ## Tecnologias utilizadas
 
+- Next.js (App Router)
 - React
 - TypeScript
-- Vite
 - Tailwind CSS
 - Lucide React
+
+## Variáveis de ambiente
+
+| Variável | Obrigatória | Descrição |
+| --- | --- | --- |
+| `CONTACT_WEBHOOK_URL` | Não | URL (Zapier/Make/n8n/Google Apps Script etc.) para onde o formulário de orçamento envia os dados via POST. Sem essa variável, o endpoint `/api/contact` responde com erro gracioso e o formulário continua funcionando apenas pelo redirecionamento ao WhatsApp (comportamento atual). |
+
+Para rodar localmente com o webhook ativo, crie um arquivo `.env.local` na raiz com:
+
+```
+CONTACT_WEBHOOK_URL=https://sua-automacao.exemplo.com/webhook
+```
+
+Em produção, configure a mesma variável em **Vercel → Project Settings → Environment Variables**.
 
 ## Como rodar localmente
 
@@ -48,7 +62,7 @@ npm run dev
 5. Acesse no navegador:
 
 ```bash
-http://localhost:5173/
+http://localhost:3000/
 ```
 
 ## Build de produção

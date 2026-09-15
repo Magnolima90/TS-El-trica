@@ -6,13 +6,22 @@ import { company } from '../data/company';
 
 export function Contact() {
   const [sending, setSending] = useState(false);
+  const [webhookStatus, setWebhookStatus] = useState<'idle' | 'sent' | 'unavailable'>('idle');
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setSending(true);
 
     const form = event.currentTarget;
     const data = new FormData(form);
+
+    // campo honeypot: invisível para pessoas, só bots preenchem
+    if (data.get('empresa')) {
+      form.reset();
+      setSending(false);
+      return;
+    }
+
     const nome = data.get('nome')?.toString().trim() || '';
     const telefone = data.get('telefone')?.toString().trim() || '';
     const email = data.get('email')?.toString().trim() || '';
@@ -27,6 +36,17 @@ export function Contact() {
       servico && `Serviço: ${servico}`,
       mensagem && `Mensagem: ${mensagem}`,
     ].filter(Boolean);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome, telefone, email, servico, mensagem }),
+      });
+      setWebhookStatus(response.ok ? 'sent' : 'unavailable');
+    } catch {
+      setWebhookStatus('unavailable');
+    }
 
     const url = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(linhas.join('\n'))}`;
     window.open(url, '_blank', 'noopener,noreferrer');
@@ -108,6 +128,15 @@ export function Contact() {
           </div>
 
           <form onSubmit={handleSubmit} className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-soft sm:p-8">
+            <input
+              type="text"
+              name="empresa"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="hidden"
+            />
+
             <div className="grid gap-5 md:grid-cols-2">
               <label className="block text-sm font-medium text-slate-700">
                 Nome
@@ -146,6 +175,11 @@ export function Contact() {
             <p className="mt-3 text-center text-xs text-slate-500">
               Ao enviar, abriremos o WhatsApp com sua solicitação pronta para envio.
             </p>
+            {webhookStatus === 'sent' ? (
+              <p className="mt-2 text-center text-xs font-semibold text-emerald-600">
+                Dados também enviados para nossa equipe.
+              </p>
+            ) : null}
           </form>
         </div>
       </div>
