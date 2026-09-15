@@ -8,8 +8,8 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(250,204,21,0.25),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.18),_transparent_25%)]" />
       <div className="absolute inset-0 bg-grid-pattern bg-[size:34px_34px] opacity-20" />
 
-      <div className="container-shell relative grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]">
-        <div>
+      <div className="container-shell relative">
+        <div className="max-w-4xl">
           <div className="flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center gap-2 rounded-full border border-electric-400/35 bg-electric-500/10 px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-electric-300">
               <Sparkles size={14} />
@@ -54,20 +54,6 @@ export function Hero() {
                 {item}
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="relative">
-          <div className="hero-float relative overflow-hidden rounded-[2rem] border border-electric-300/40 bg-slate-900 shadow-[0_30px_60px_rgba(250,204,21,0.2)]">
-            <img
-              src="/projetos/escritorio-corredor-led.jpg"
-              alt="Projeto de iluminação em LED executado pela TS Elétrica em escritório corporativo"
-              width={1242}
-              height={933}
-              fetchPriority="high"
-              className="h-[520px] w-full object-cover"
-            />
-
           </div>
         </div>
       </div>
