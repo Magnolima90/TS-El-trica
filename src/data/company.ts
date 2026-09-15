@@ -34,6 +34,8 @@ export const services = [
   { title: 'Instalações Industriais', description: 'Infraestrutura elétrica para ambientes industriais e processos produtivos.', icon: 'Factory' },
   { title: 'Instalações Comerciais', description: 'Soluções para lojas, escritórios, shoppings, hospitais e prédios comerciais.', icon: 'Building2' },
   { title: 'Instalações Residenciais', description: 'Projetos e adequações para casas, apartamentos e condomínios.', icon: 'Home' },
+  { title: 'Iluminação', description: 'Projetos e instalações de iluminação em LED para ambientes residenciais e comerciais.', icon: 'Lightbulb' },
+  { title: 'Adequações Elétricas', description: 'Adequações e reformas para melhorar a segurança, organização e funcionamento das instalações.', icon: 'Wrench' },
   { title: 'Montagem de Painéis Elétricos', description: 'Montagem e organização de painéis de comando e distribuição.', icon: 'PanelTop' },
   { title: 'QGBT / Quadros Elétricos', description: 'Dimensionamento e montagem de quadros para diferentes demandas elétricas.', icon: 'CircuitBoard' },
   { title: 'SPDA', description: 'Proteção contra descargas atmosféricas e sistemas de aterramento.', icon: 'CloudLightning' },
@@ -113,3 +115,5 @@ export const navItems = [
   { label: 'FAQ', href: '#faq' },
   { label: 'Contato', href: '#contato' },
 ];
+
+export const areas: { title: string; description: string; image: string }[] = [];

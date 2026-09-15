@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2, PhoneCall, ShieldCheck, Sparkles, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle2, PhoneCall, Sparkles } from 'lucide-react';
 import { company } from '../data/company';
 import { ButtonWhatsApp } from './ButtonWhatsApp';
 
@@ -27,7 +27,7 @@ export function Hero() {
           </div>
 
           <h1 className="mt-6 max-w-3xl text-4xl font-black leading-[1.02] tracking-[-0.06em] text-white sm:text-5xl lg:text-6xl">
-            TS Elétrica | Soluções Elétricas em Fortaleza
+            Soluções Elétricas com Segurança e Qualidade
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
@@ -35,11 +35,11 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href="#contato" className="premium-button">
-              Solicitar orçamento
+            <ButtonWhatsApp text="Solicitar Orçamento" className="bg-[#25D366] text-white shadow-[0_18px_35px_rgba(37,211,102,0.25)]" />
+            <a href="#servicos" className="premium-button border border-white/20 bg-white/10 text-white hover:bg-white/15">
+              Conhecer serviços
               <ArrowRight className="ml-2" size={16} />
             </a>
-            <ButtonWhatsApp className="bg-[#25D366] text-white shadow-[0_18px_35px_rgba(37,211,102,0.25)]" />
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-200">
@@ -68,30 +68,6 @@ export function Hero() {
               className="h-[520px] w-full object-cover"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" />
-
-            <div className="absolute inset-x-5 bottom-5 rounded-[1.4rem] border border-white/10 bg-slate-950/80 p-4 backdrop-blur-md">
-              <div className="flex items-center justify-between gap-3">
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-electric-300">Atendimento em Fortaleza</p>
-                  <p className="mt-2 text-2xl font-black text-white">TS Elétrica</p>
-                </div>
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-electric-500 text-slate-900 shadow-[0_12px_26px_rgba(250,204,21,0.45)]">
-                  <Zap size={22} />
-                </div>
-              </div>
-
-              <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-slate-200">
-                <div className="rounded-xl border border-white/10 bg-white/5 p-3">
-                  <div className="flex items-center gap-2 text-electric-300"><ShieldCheck size={15} /> Segurança</div>
-                  <p className="mt-2 font-semibold text-white">Normas e processo rigoroso</p>
-                </div>
-                <div className="rounded-xl border border-white/10 bg-white/5 p-3">
-                  <div className="flex items-center gap-2 text-electric-300"><CheckCircle2 size={15} /> Qualidade</div>
-                  <p className="mt-2 font-semibold text-white">Execução com cuidado e precisão</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

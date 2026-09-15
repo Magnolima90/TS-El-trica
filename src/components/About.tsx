@@ -5,7 +5,7 @@ export function About() {
   return (
     <section id="sobre" className="bg-white py-20">
       <div className="container-shell grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-        <div>
+        <div className="order-2 lg:order-1">
           <span className="section-tag">Sobre nós</span>
           <h2 className="mt-5 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
             Quem é a TS Elétrica em Fortaleza
@@ -35,7 +35,7 @@ export function About() {
           </a>
         </div>
 
-        <div>
+        <div className="order-1 lg:order-2">
           <img
             src={proprietarioPhoto}
             alt="Proprietário da TS Elétrica, especialista em soluções elétricas em Fortaleza"

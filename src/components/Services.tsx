@@ -1,4 +1,4 @@
-import { ArrowUpRight, Cable, Building2, Factory, ShieldCheck, Wrench, Home, CircuitBoard, CloudLightning, Cpu, Gauge, Warehouse, Bot, ClipboardCheck, ThermometerSun, Zap, Bolt, SunMedium, PanelTop, Camera, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, Cable, Building2, Factory, ShieldCheck, Wrench, Home, CircuitBoard, CloudLightning, Cpu, Gauge, Warehouse, Bot, ClipboardCheck, ThermometerSun, Zap, Bolt, SunMedium, PanelTop, Camera, Lightbulb, CheckCircle2 } from 'lucide-react';
 import { services } from '../data/company';
 import { SectionTitle } from './SectionTitle';
 
@@ -6,6 +6,7 @@ const iconMap = {
   Bolt,
   Cable,
   Camera,
+  Lightbulb,
   ShieldCheck,
   Wrench,
   Factory,
