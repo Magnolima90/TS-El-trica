@@ -16,12 +16,28 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
+}
+
+section[id],
+#inicio,
+#sobre,
+#servicos,
+#projetos,
+#contato,
+#faq,
+#diferenciais {
+  scroll-margin-top: 96px;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+body.panel-open {
+  overflow: hidden;
 }
 
 * {
@@ -74,6 +90,49 @@ select {
 
 .soft-card {
   @apply rounded-[1.75rem] border border-white/10 bg-white/5 backdrop-blur-sm shadow-soft;
+}
+
+.hero-dock-link {
+  @apply flex min-w-0 flex-col items-center justify-center gap-1 rounded-[0.9rem] border border-white/10 bg-white/5 px-1.5 py-2.5 text-center text-[9px] font-bold uppercase leading-3 tracking-[0.08em] text-slate-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric-300/80 active:scale-[0.98] active:bg-white/15 sm:gap-1.5 sm:px-3 sm:py-4 sm:text-[10px] md:text-[10px];
+}
+
+.hero-dock-link:hover {
+  @apply bg-white/10 text-white;
+}
+
+@keyframes whatsappPulse {
+  0% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+}
+
+.panel-backdrop {
+  @apply fixed inset-0 z-[100] flex justify-end bg-slate-950/65 p-0 backdrop-blur-sm sm:p-4;
+  animation: panelFade 0.25s ease-out both;
+}
+
+.content-panel {
+  @apply relative h-full w-full overflow-y-auto bg-slate-50 shadow-2xl sm:max-w-5xl sm:rounded-[2rem];
+  animation: panelSlide 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.panel-close {
+  @apply sticky right-5 top-5 z-20 ml-auto mr-5 mt-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-slate-950 text-2xl leading-none text-white shadow-lg transition hover:scale-105 hover:bg-electric-500 hover:text-slate-950;
+}
+
+@keyframes panelFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes panelSlide {
+  from { opacity: 0; transform: translateX(28px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 [data-animate] {
@@ -130,5 +189,10 @@ button:hover {
   [data-animate] {
     opacity: 1;
     transform: none;
+  }
+
+  .panel-backdrop,
+  .content-panel {
+    animation: none;
   }
 }

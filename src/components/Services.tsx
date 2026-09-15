@@ -39,10 +39,21 @@ export function Services() {
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service, index) => {
             const Icon = iconMap[service.icon as keyof typeof iconMap] ?? CheckCircle2;
+            const anchorId = service.title.includes('Iluminação')
+              ? 'iluminacao'
+              : service.title === 'Manutenção Preventiva'
+                ? 'manutencao'
+                : service.title === 'Instalações Residenciais'
+                  ? 'residencial'
+                  : service.title === 'Instalações Comerciais'
+                    ? 'comercial'
+                    : undefined;
+
             return (
               <article
                 key={service.title}
-                className="group flex h-full flex-col rounded-[1.7rem] border border-slate-200 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-2 hover:border-electric-200 hover:shadow-[0_24px_45px_-26px_rgba(250,204,21,0.45)]"
+                id={anchorId}
+                className="group flex h-full flex-col scroll-mt-6 rounded-[1.7rem] border border-slate-200 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-2 hover:border-electric-200 hover:shadow-[0_24px_45px_-26px_rgba(250,204,21,0.45)]"
                 style={{ animationDelay: `${index * 60}ms` }}
               >
                 <div className="flex items-center justify-between">

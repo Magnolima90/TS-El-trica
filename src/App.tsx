@@ -1,91 +1,86 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { About } from './components/About';
 import { CTA } from './components/CTA';
 import { Contact } from './components/Contact';
 import { Differentials } from './components/Differentials';
 import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
-import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { InstagramButton } from './components/InstagramButton';
 import { Portfolio } from './components/Portfolio';
 import { Process } from './components/Process';
 import { Safety } from './components/Safety';
 import { Services } from './components/Services';
 import { Stats } from './components/Stats';
 import { Testimonials } from './components/Testimonials';
-import { WhatsAppButton } from './components/WhatsAppButton';
 
 export default function App() {
+  const [activePanel, setActivePanel] = useState<string | null>(null);
+
   useEffect(() => {
-    const animatedItems = document.querySelectorAll('[data-animate]');
+    document.body.classList.toggle('panel-open', Boolean(activePanel));
+    return () => document.body.classList.remove('panel-open');
+  }, [activePanel]);
 
-    if (!animatedItems.length) return;
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setActivePanel(null);
+    };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 },
-    );
-
-    animatedItems.forEach((item) => {
-      item.classList.add('is-visible');
-      observer.observe(item);
-    });
-
-    return () => observer.disconnect();
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <Header />
-      <main>
-        <div data-animate>
-          <Hero />
-        </div>
-        <div data-animate>
-          <About />
-        </div>
-        <div data-animate>
-          <Services />
-        </div>
-        <div data-animate>
-          <Stats />
-        </div>
-        <div data-animate>
-          <Differentials />
-        </div>
-        <div data-animate>
-          <Portfolio />
-        </div>
-        <div data-animate>
-          <Process />
-        </div>
-        <div data-animate>
-          <Safety />
-        </div>
-        <div data-animate>
-          <Testimonials />
-        </div>
-        <div data-animate>
-          <FAQ />
-        </div>
-        <div data-animate>
-          <CTA />
-        </div>
-        <div data-animate>
-          <Contact />
-        </div>
+      <a
+        href="#conteudo"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-lg focus:bg-slate-950 focus:px-4 focus:py-3 focus:text-sm focus:font-bold focus:text-white"
+      >
+        Pular para o conteúdo
+      </a>
+      <main id="conteudo">
+        <Hero onOpenPanel={setActivePanel} />
       </main>
-      <Footer />
-      <InstagramButton />
-      <WhatsAppButton />
+
+      {activePanel ? (
+        <div className="panel-backdrop" onClick={() => setActivePanel(null)}>
+          <section
+            className="content-panel"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${activePanel} - TS Elétrica`}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="panel-close"
+              aria-label="Fechar painel"
+              onClick={() => setActivePanel(null)}
+            >
+              ×
+            </button>
+            {activePanel === 'servicos' ? <Services /> : null}
+            {activePanel === 'projetos' ? <Process /> : null}
+            {activePanel === 'sobre' ? (
+              <>
+                <About />
+                <Stats />
+                <Differentials />
+                <Safety />
+                <Testimonials />
+                <FAQ />
+              </>
+            ) : null}
+            {activePanel === 'realizados' ? <Portfolio /> : null}
+            {activePanel === 'localizacao' ? <Contact /> : null}
+          </section>
+        </div>
+      ) : null}
+
+      <div className="sr-only">
+        <CTA />
+        <Footer />
+      </div>
     </div>
   );
 }

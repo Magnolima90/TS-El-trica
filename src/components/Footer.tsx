@@ -4,7 +4,7 @@ import { company } from '../data/company';
 export function Footer() {
   return (
     <footer className="bg-slate-950 text-white">
-      <div className="container-shell pb-44 pt-16 sm:pb-16">
+      <div className="container-shell pb-16 pt-16">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_1fr]">
           <div>
             <div className="flex items-center gap-3">

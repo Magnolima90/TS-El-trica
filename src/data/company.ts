@@ -12,7 +12,7 @@ export const company = {
   emergency24h: true,
   whatsappMessage: 'Olá! Gostaria de solicitar um orçamento para um serviço elétrico.',
   whatsappEmergencyMessage: 'Olá! Preciso de atendimento elétrico de emergência.',
-  serviceTypes: ['Projetos Elétricos', 'Instalações Elétricas', 'Manutenção', 'Painéis Elétricos', 'CFTV', 'Energia Solar'],
+  serviceTypes: ['Projetos Elétricos', 'Instalações Elétricas', 'Manutenção', 'Painéis Elétricos', 'CFTV'],
   norms: ['NR-10', 'NR-35', 'ABNT NBR 5410', 'ABNT NBR 5419', 'ART, quando aplicável'],
   serviceAreas: ['Fortaleza', 'Caucaia', 'Maracanaú', 'Eusébio', 'Aquiraz', 'Pacatuba', 'Itaitinga', 'São Gonçalo do Amarante'],
   mapsEmbedUrl: 'https://www.google.com/maps?q=Fortaleza,+CE&output=embed',
@@ -40,13 +40,6 @@ export const services = [
   { title: 'QGBT / Quadros Elétricos', description: 'Dimensionamento e montagem de quadros para diferentes demandas elétricas.', icon: 'CircuitBoard' },
   { title: 'SPDA', description: 'Proteção contra descargas atmosféricas e sistemas de aterramento.', icon: 'CloudLightning' },
   { title: 'Sistemas de Aterramento', description: 'Estruturas certificadas para segurança e funcionalidade dos circuitos.', icon: 'Cpu' },
-  { title: 'Energia Solar', description: 'Geração distribuída com projetos e instalações de sistemas fotovoltaicos.', icon: 'SunMedium' },
-  { title: 'Geradores', description: 'Instalações e manutenção para continuidade operacional em emergências.', icon: 'Gauge' },
-  { title: 'Subestações', description: 'Estruturas e sistemas para distribuição e transformação de energia.', icon: 'Warehouse' },
-  { title: 'Automação Industrial', description: 'Integração e controle inteligente para otimizar processos produtivos.', icon: 'Bot' },
-  { title: 'Laudos e Inspeções Técnicas', description: 'Avaliações detalhadas para segurança, conformidade e diagnóstico.', icon: 'ClipboardCheck' },
-  { title: 'Termografia', description: 'Análises térmicas para identificar pontos críticos e riscos elétricos.', icon: 'ThermometerSun' },
-  { title: 'Eficiência Energética', description: 'Diagnósticos e ações para reduzir consumo, perdas e custos operacionais.', icon: 'Zap' },
 ];
 
 export type PortfolioItem =
@@ -75,7 +68,6 @@ export const faqs = [
   { question: 'Vocês atendem empresas e indústrias?', answer: 'Sim. Realizamos projetos, instalações, manutenção e adequações para ambientes comerciais e industriais, incluindo infraestrutura e painéis elétricos.' },
   { question: 'Vocês realizam manutenção elétrica?', answer: 'Sim. Oferecemos manutenção preventiva e corretiva para evitar falhas, melhorar desempenho e garantir maior segurança operacional.' },
   { question: 'Vocês trabalham com projetos elétricos?', answer: 'Sim. Desenvolvemos projetos elétricos sob medida para atender as necessidades técnicas e operacionais de cada cliente.' },
-  { question: 'Vocês fazem instalação de energia solar?', answer: 'Sim. Realizamos estudos, dimensionamento e instalação de sistemas fotovoltaicos para geração de energia sustentável.' },
   { question: 'Vocês realizam inspeções e laudos?', answer: 'Sim. Executamos inspeções, laudos e avaliações técnicas para diagnóstico, conformidade e melhoria de segurança.' },
   { question: 'Qual o prazo para receber um orçamento?', answer: 'Depende da complexidade do projeto. Em geral, retornamos com a avaliação inicial rapidamente e apresentamos a proposta em tempo hábil.' },
 ];
@@ -106,14 +98,3 @@ export const differentials = [
   'Soluções personalizadas',
 ];
 
-export const navItems = [
-  { label: 'Início', href: '#inicio' },
-  { label: 'Sobre nós', href: '#sobre' },
-  { label: 'Serviços', href: '#servicos' },
-  { label: 'Projetos', href: '#projetos' },
-  { label: 'Diferenciais', href: '#diferenciais' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contato', href: '#contato' },
-];
-
-export const areas: { title: string; description: string; image: string }[] = [];
