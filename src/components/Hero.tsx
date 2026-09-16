@@ -34,7 +34,7 @@ export function Hero({ onOpenPanel }: HeroProps) {
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[62%_center]"
+        className="object-cover object-[62%_68%]"
       />
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(148,163,184,0.2),_transparent_45%),linear-gradient(90deg,rgba(2,6,23,0.86)_0%,rgba(2,6,23,0.58)_28%,rgba(2,6,23,0.22)_58%,rgba(2,6,23,0.86)_100%)]" />
@@ -88,29 +88,19 @@ export function Hero({ onOpenPanel }: HeroProps) {
       </div>
 
       <nav aria-label="Acesso rápido" className="relative z-20 shrink-0 px-3 pb-4 sm:px-4 sm:pb-6">
-        <div className="mx-auto max-w-5xl space-y-2 sm:space-y-3">
-          <button
-            type="button"
-            onClick={() => onOpenPanel('servicos')}
-            className="premium-button w-full justify-center bg-electric-400 text-slate-950 shadow-[0_18px_35px_rgba(250,204,21,0.25)] hover:bg-electric-300"
-          >
-            Solicitar atendimento
-          </button>
-
-          <div className="grid grid-cols-2 gap-2 rounded-[1.4rem] border border-white/15 bg-slate-950/65 p-2 shadow-[0_25px_70px_rgba(2,6,23,0.5)] backdrop-blur-xl sm:grid-cols-3 sm:rounded-[1.65rem] lg:grid-cols-5 lg:gap-3 lg:p-3">
-            {heroLinks.map(({ panel, label, ariaLabel, icon: Icon }, index) => (
-              <button
-                key={panel}
-                type="button"
-                onClick={() => onOpenPanel(panel)}
-                aria-label={ariaLabel}
-                className={`hero-dock-link${index === heroLinks.length - 1 ? ' col-span-2 sm:col-span-1' : ''}`}
-              >
-                <Icon size={16} strokeWidth={1.8} className="sm:h-[18px] sm:w-[18px]" />
-                <span>{label}</span>
-              </button>
-            ))}
-          </div>
+        <div className="mx-auto grid max-w-5xl grid-cols-2 gap-2 rounded-[1.4rem] border border-white/15 bg-slate-950/65 p-2 shadow-[0_25px_70px_rgba(2,6,23,0.5)] backdrop-blur-xl sm:grid-cols-3 sm:rounded-[1.65rem] lg:grid-cols-5 lg:gap-3 lg:p-3">
+          {heroLinks.map(({ panel, label, ariaLabel, icon: Icon }, index) => (
+            <button
+              key={panel}
+              type="button"
+              onClick={() => onOpenPanel(panel)}
+              aria-label={ariaLabel}
+              className={`hero-dock-link${index === heroLinks.length - 1 ? ' col-span-2 sm:col-span-1' : ''}`}
+            >
+              <Icon size={16} strokeWidth={1.8} className="sm:h-[18px] sm:w-[18px]" />
+              <span>{label}</span>
+            </button>
+          ))}
         </div>
       </nav>
     </section>
