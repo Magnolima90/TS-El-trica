@@ -6,9 +6,9 @@ import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
-const title = 'TS Elétrica | Soluções Elétricas em Fortaleza';
+const title = 'TS Elétrica | Eletricista em Fortaleza - CE';
 const description =
-  'TS Elétrica - Soluções Elétricas em Fortaleza, CE. Instalações, manutenção e atendimento elétrico emergencial 24h. Solicite seu orçamento.';
+  'TS Elétrica em Fortaleza - CE. Serviços de instalação, manutenção e reparos elétricos residenciais, prediais e comerciais.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
