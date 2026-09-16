@@ -45,10 +45,8 @@ export default function HomePage() {
         }}
       />
 
-      <div className="sr-only">
-        <CTA />
-        <Footer />
-      </div>
+      <CTA />
+      <Footer />
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </div>

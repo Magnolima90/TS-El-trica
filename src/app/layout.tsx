@@ -6,7 +6,7 @@ import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
-const title = 'TS Elétrica | Engenharia Elétrica em Fortaleza, CE';
+const title = 'TS Elétrica | Soluções Elétricas em Fortaleza';
 const description =
   'TS Elétrica - Soluções Elétricas em Fortaleza, CE. Instalações, manutenção e atendimento elétrico emergencial 24h. Solicite seu orçamento.';
 
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     description,
     siteName: company.companyName,
     url: siteUrl,
-    images: [{ url: `${siteUrl}/og-image.png`, width: 1200, height: 630, alt: 'TS Elétrica - Engenharia Elétrica em Fortaleza' }],
+    images: [{ url: `${siteUrl}/og-image.png`, width: 1200, height: 630, alt: 'TS Elétrica - Soluções Elétricas em Fortaleza' }],
   },
   twitter: {
     card: 'summary_large_image',
     title,
     description,
-    images: [{ url: `${siteUrl}/og-image.png`, alt: 'TS Elétrica - Engenharia Elétrica em Fortaleza' }],
+    images: [{ url: `${siteUrl}/og-image.png`, alt: 'TS Elétrica - Soluções Elétricas em Fortaleza' }],
   },
 };
 
