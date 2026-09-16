@@ -5,16 +5,21 @@ import { useState } from 'react';
 import { faqs } from '../data/company';
 import { SectionTitle } from './SectionTitle';
 
-export function FAQ() {
+type FAQProps = {
+  items?: { question: string; answer: string }[];
+  title?: string;
+};
+
+export function FAQ({ items = faqs, title = 'Dúvidas sobre serviços elétricos em Fortaleza' }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
     <section id="faq" className="bg-white py-20">
       <div className="container-shell">
-        <SectionTitle tag="FAQ" title="Dúvidas sobre serviços elétricos em Fortaleza" align="center" />
+        <SectionTitle tag="FAQ" title={title} align="center" />
 
         <div className="mx-auto mt-12 max-w-4xl space-y-4">
-          {faqs.map((item, index) => {
+          {items.map((item, index) => {
             const isOpen = index === openIndex;
             return (
               <div key={item.question} className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
