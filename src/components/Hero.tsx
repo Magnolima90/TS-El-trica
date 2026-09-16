@@ -34,7 +34,7 @@ export function Hero({ onOpenPanel }: HeroProps) {
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[62%_68%]"
+        className="object-cover object-[62%_68%] lg:object-[62%_22%]"
       />
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(148,163,184,0.2),_transparent_45%),linear-gradient(90deg,rgba(2,6,23,0.86)_0%,rgba(2,6,23,0.58)_28%,rgba(2,6,23,0.22)_58%,rgba(2,6,23,0.86)_100%)]" />
