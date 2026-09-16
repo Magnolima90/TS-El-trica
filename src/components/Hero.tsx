@@ -83,34 +83,34 @@ export function Hero({ onOpenPanel }: HeroProps) {
         </div>
       </header>
 
-      <div className="container-shell relative z-10 flex min-h-0 flex-1 items-end overflow-hidden pb-4 sm:items-center sm:pb-0">
-        <div className="max-w-[18rem] sm:max-w-3xl">
-          <h1 className="sr-only">TS Elétrica</h1>
-
-          <button
-            type="button"
-            onClick={() => onOpenPanel('servicos')}
-            className="premium-button w-full bg-electric-400 text-slate-950 shadow-[0_18px_35px_rgba(250,204,21,0.25)] hover:bg-electric-300 sm:w-auto"
-          >
-            Solicitar atendimento
-          </button>
-        </div>
+      <div className="relative z-10 min-h-0 flex-1">
+        <h1 className="sr-only">TS Elétrica</h1>
       </div>
 
       <nav aria-label="Acesso rápido" className="relative z-20 shrink-0 px-3 pb-4 sm:px-4 sm:pb-6">
-        <div className="mx-auto grid max-w-5xl grid-cols-2 gap-2 rounded-[1.4rem] border border-white/15 bg-slate-950/65 p-2 shadow-[0_25px_70px_rgba(2,6,23,0.5)] backdrop-blur-xl sm:grid-cols-3 sm:rounded-[1.65rem] lg:grid-cols-5 lg:gap-3 lg:p-3">
-          {heroLinks.map(({ panel, label, ariaLabel, icon: Icon }, index) => (
-            <button
-              key={panel}
-              type="button"
-              onClick={() => onOpenPanel(panel)}
-              aria-label={ariaLabel}
-              className={`hero-dock-link${index === heroLinks.length - 1 ? ' col-span-2 sm:col-span-1' : ''}`}
-            >
-              <Icon size={16} strokeWidth={1.8} className="sm:h-[18px] sm:w-[18px]" />
-              <span>{label}</span>
-            </button>
-          ))}
+        <div className="mx-auto max-w-5xl space-y-2 sm:space-y-3">
+          <button
+            type="button"
+            onClick={() => onOpenPanel('servicos')}
+            className="premium-button w-full justify-center bg-electric-400 text-slate-950 shadow-[0_18px_35px_rgba(250,204,21,0.25)] hover:bg-electric-300"
+          >
+            Solicitar atendimento
+          </button>
+
+          <div className="grid grid-cols-2 gap-2 rounded-[1.4rem] border border-white/15 bg-slate-950/65 p-2 shadow-[0_25px_70px_rgba(2,6,23,0.5)] backdrop-blur-xl sm:grid-cols-3 sm:rounded-[1.65rem] lg:grid-cols-5 lg:gap-3 lg:p-3">
+            {heroLinks.map(({ panel, label, ariaLabel, icon: Icon }, index) => (
+              <button
+                key={panel}
+                type="button"
+                onClick={() => onOpenPanel(panel)}
+                aria-label={ariaLabel}
+                className={`hero-dock-link${index === heroLinks.length - 1 ? ' col-span-2 sm:col-span-1' : ''}`}
+              >
+                <Icon size={16} strokeWidth={1.8} className="sm:h-[18px] sm:w-[18px]" />
+                <span>{label}</span>
+              </button>
+            ))}
+          </div>
         </div>
       </nav>
     </section>

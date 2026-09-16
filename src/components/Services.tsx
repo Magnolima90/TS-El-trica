@@ -1,6 +1,14 @@
-import { ArrowUpRight, Cable, Building2, Factory, ShieldCheck, Wrench, Home, CircuitBoard, CloudLightning, Cpu, Gauge, Warehouse, Bot, ClipboardCheck, ThermometerSun, Zap, Bolt, SunMedium, PanelTop, Camera, Lightbulb, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, MessageCircle, Cable, Building2, Factory, ShieldCheck, Wrench, Home, CircuitBoard, CloudLightning, Cpu, Gauge, Warehouse, Bot, ClipboardCheck, ThermometerSun, Zap, Bolt, SunMedium, PanelTop, Camera, Lightbulb, CheckCircle2 } from 'lucide-react';
+import Link from 'next/link';
 import { services } from '../data/company';
+import { getWhatsAppLink } from '../lib/whatsapp';
 import { SectionTitle } from './SectionTitle';
+
+// Serviços com página dedicada de SEO local (src/app/servicos/*)
+const servicePageSlugs: Record<string, string> = {
+  'Instalações Residenciais': 'instalacao-residencial',
+  'Manutenção Preventiva': 'manutencao-preventiva',
+};
 
 const iconMap = {
   Bolt,
@@ -68,13 +76,27 @@ export function Services() {
                 <h3 className="mt-6 text-xl font-bold text-slate-900">{service.title}</h3>
                 <p className="mt-3 flex-1 text-sm leading-6 text-slate-600">{service.description}</p>
 
-                <a
-                  href="#contato"
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-electric-700 transition hover:text-electric-800"
-                >
-                  Solicitar orçamento
-                  <ArrowUpRight size={14} />
-                </a>
+                <div className="mt-5 flex items-center gap-4">
+                  <a
+                    href={getWhatsAppLink(service.title)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-electric-700 transition hover:text-electric-800"
+                  >
+                    Solicitar orçamento
+                    <MessageCircle size={14} />
+                  </a>
+
+                  {servicePageSlugs[service.title] ? (
+                    <Link
+                      href={`/servicos/${servicePageSlugs[service.title]}`}
+                      className="inline-flex items-center gap-1 text-sm font-semibold text-slate-500 transition hover:text-slate-700"
+                    >
+                      Ver detalhes
+                      <ArrowUpRight size={13} />
+                    </Link>
+                  ) : null}
+                </div>
               </article>
             );
           })}
