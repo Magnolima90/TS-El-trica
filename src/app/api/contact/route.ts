@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { siteUrl } from '../../../data/company';
 
 type ContactPayload = {
   nome?: string;
@@ -35,14 +36,21 @@ export async function POST(request: Request) {
   try {
     const webhookResponse = await fetch(webhookUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        // alguns provedores de webhook (ex.: FormSubmit) exigem esses cabeçalhos
+        // para confirmar que a origem é o próprio site
+        Origin: siteUrl,
+        Referer: `${siteUrl}/`,
+      },
       body: JSON.stringify({
         nome,
         telefone,
         email: payload.email?.trim() ?? '',
         servico: payload.servico?.trim() ?? '',
         mensagem: payload.mensagem?.trim() ?? '',
-        origem: 'ts-eletrica.vercel.app',
+        origem: siteUrl,
         enviadoEm: new Date().toISOString(),
       }),
     });
