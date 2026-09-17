@@ -1,4 +1,4 @@
-export const siteUrl = 'https://ts-eletrica.vercel.app';
+export const siteUrl = 'https://tseletricafortaleza.com.br';
 
 export const company = {
   companyName: 'TS Elétrica',
