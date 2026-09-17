@@ -3,9 +3,15 @@
 import { useEffect, useRef, useState } from 'react';
 import { stats } from '../data/company';
 
+function parseTarget(value: string) {
+  return Number.parseFloat(value.replace(/[^\d.]/g, '')) || 0;
+}
+
 export function Stats() {
   const [hasAnimated, setHasAnimated] = useState(false);
-  const [values, setValues] = useState<number[]>(stats.map(() => 0));
+  // Começa já no valor final real (bom para SEO/no-JS/leitura estática);
+  // ao entrar na tela, reinicia em 0 e conta até aqui de novo, só como efeito visual.
+  const [values, setValues] = useState<number[]>(() => stats.map((stat) => parseTarget(stat.value)));
   const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -31,11 +37,9 @@ export function Stats() {
     if (!hasAnimated) return;
 
     const duration = 1200;
-    const starts = stats.map((stat) => {
-      const numericValue = Number.parseFloat(stat.value.replace(/[^\d.]/g, '')) || 0;
-      return numericValue;
-    });
+    const starts = stats.map((stat) => parseTarget(stat.value));
 
+    setValues(starts.map(() => 0));
     const startTime = performance.now();
 
     const tick = (currentTime: number) => {
