@@ -12,7 +12,7 @@ export function About() {
             Quem é a TS Elétrica em Fortaleza
           </h2>
           <p className="mt-6 text-lg text-slate-600">
-            Nossa empresa atua no mercado de engenharia elétrica com foco em soluções duráveis, técnicas e seguras para cada projeto. Trabalhamos com planejamento, execução, manutenção e suporte técnico para garantir qualidade em cada etapa.
+            Somos uma empresa de engenharia elétrica e eletricista em Fortaleza, com foco em soluções duráveis, técnicas e seguras para cada projeto. Trabalhamos com planejamento, execução, manutenção e suporte técnico para garantir qualidade em cada etapa.
           </p>
           <div className="mt-7 grid gap-4 sm:grid-cols-2">
             {[

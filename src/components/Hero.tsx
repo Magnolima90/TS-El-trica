@@ -84,7 +84,9 @@ export function Hero({ onOpenPanel }: HeroProps) {
       </header>
 
       <div className="relative z-10 min-h-0 flex-1">
-        <h1 className="sr-only">TS Elétrica</h1>
+        <h1 className="sr-only">
+          TS Elétrica - Eletricista em Fortaleza, CE | Instalações e Manutenção Elétrica Residencial, Comercial e Industrial
+        </h1>
       </div>
 
       <nav aria-label="Acesso rápido" className="relative z-20 shrink-0 px-3 pb-4 sm:px-4 sm:pb-6">
